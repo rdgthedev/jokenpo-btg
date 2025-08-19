@@ -1,0 +1,2 @@
+﻿ChoiceHelper.InitializeSingletons();
+Menu.Load();
