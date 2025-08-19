@@ -11,7 +11,7 @@ public static class MoveValidator
             return Result.Result.Tie("Empate! Ambos os jogadores escolheram a mesma opção.");
 
         return secondPlayer.Value.Weaknesses.Any(w => w.Name == firstPlayer.Value.Name)
-            ? Result.Result.Failure($"Parabéns {firstPlayer.Key.Name}, você venceu!")
-            : Result.Result.Success($"Parabéns {secondPlayer.Key.Name}, você venceu!");
+            ? Result.Result.Win($"Parabéns {firstPlayer.Key.Name}, você venceu!")
+            : Result.Result.Win($"Parabéns {secondPlayer.Key.Name}, você venceu!");
     }
 }
