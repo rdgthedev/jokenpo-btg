@@ -41,9 +41,7 @@ public static class ChoiceHelper
         if (choiceType is null)
             throw new ArgumentException($"Ocorreu um erro crítico ao buscar a escolha ({key}). Tente novamente.");
 
-        var choiceInstance = choiceType.GetProperty(
-            propertyName,
-            System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+        var choiceInstance = choiceType.GetProperty(propertyName);
 
         if (choiceInstance is null)
             throw new ArgumentException($"A escolha ({choiceName}) não possui singleton.");
